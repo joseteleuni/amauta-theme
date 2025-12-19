@@ -1,0 +1,14 @@
+{
+  "src/scripts/main.js": {
+    "file": "assets/main-l0sNRNKZ.js",
+    "name": "main",
+    "src": "src/scripts/main.js",
+    "isEntry": true
+  },
+  "src/styles/main.scss": {
+    "file": "assets/style-l0sNRNKZ.js",
+    "name": "style",
+    "src": "src/styles/main.scss",
+    "isEntry": true
+  }
+}

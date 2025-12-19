@@ -1,0 +1,15 @@
+{
+  "name": "mi-tema-senior-front",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0",
+    "vite": "^5.0.0",
+    "vite-plugin-live-reload": "^3.0.0"
+  }
+}
