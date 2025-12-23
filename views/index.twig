@@ -1,0 +1,21 @@
+{# Heredamos de la estructura base #}
+{% extends "layouts/base.twig" %}
+
+{# Sobreescribimos el bloque 'content' #}
+{% block content %}
+    <div class="container mx-auto px-4 py-8">
+        <h1>Últimas Entradas Peru</h1>
+        
+        <div class="grid-posts">
+            {% for post in posts %}
+                <article class="post-card">
+                    <h2><a href="{{ post.link }}">{{ post.title }}</a></h2>
+                    <p>{{ post.preview.length(20) }}</p>
+                    <a href="{{ post.link }}">Leer más</a>
+                </article>
+            {% else %}
+                <p>No se encontraron posts.</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

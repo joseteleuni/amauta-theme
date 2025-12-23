@@ -1,0 +1,29 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+    <article class="post-single">
+        
+        <h1>Post Single</h1>
+        
+        {# Título del Post #}
+        <h1>{{ post.title }}</h1>
+
+        {# Meta datos (fecha, autor, categorías) #}
+        <div class="meta">
+            <span>Por {{ post.author.name }}</span> | 
+            <span>{{ post.date }}</span>
+        </div>
+
+        {# Imagen destacada en grande #}
+        {% if post.thumbnail %}
+            <img src="{{ post.thumbnail.src }}" alt="{{ post.title }}" class="img-fluid">
+        {% endif %}
+
+        {# --- AQUÍ ESTÁ LA DIFERENCIA --- #}
+        {# Usamos content para ver todo el artículo, no solo el resumen #}
+        <div class="entry-content">
+            {{ post.content }}
+        </div>
+
+    </article>
+{% endblock %}

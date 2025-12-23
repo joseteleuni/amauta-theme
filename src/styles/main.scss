@@ -1,0 +1,14 @@
+// src/styles/main.scss
+
+// 1. Configuración
+@import 'variables';
+@import 'reset';
+
+// 2. Componentes
+@import 'header';
+
+// 3. Estilos Globales
+body {
+    background-color: $bg-color; // Variable definida en _variables.scss
+    font-family: sans-serif;
+}

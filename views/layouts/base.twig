@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html {{ site.language_attributes }}>
+<head>
+    <meta charset="{{ site.charset }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    {# IMPORTANTE: Esto carga los estilos de Vite y plugins #}
+    {{ function('wp_head') }}
+</head>
+
+<body class="{{ body_class }}">
+    {# Hook para inyectar scripts justo al abrir body (GTM, Analytics) #}
+    {{ function('wp_body_open') }}
+
+
+        {% include "partials/header.twig" ignore missing %}
+
+
+    <main id="content" role="main">
+        {# AQUÍ se inyectará el contenido de las otras páginas #}
+        {% block content %}
+            Lo siento, no hay contenido definido.
+        {% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        {% include "partials/footer.twig" ignore missing %}
+    </footer>
+
+    {# IMPORTANTE: Esto carga la barra de admin y scripts JS #}
+    {{ function('wp_footer') }}
+</body>
+</html>

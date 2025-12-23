@@ -1,0 +1,23 @@
+{# views/partials/header.twig #}
+
+<header class="site-header">
+    <div class="container">
+        
+        {# 1. El Logo #}
+        <a href="{{ site.url }}" class="site-header__logo">
+            {{ site.name }}
+        </a>
+
+        {# 2. La Navegación #}
+        <nav class="site-header__nav">
+            <ul>
+                {% for item in menu.items %}
+                    <li class="{{ item.classes | join(' ') }}">
+                        <a href="{{ item.link }}">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+    </div>
+</header>

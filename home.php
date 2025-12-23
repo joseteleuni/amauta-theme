@@ -9,4 +9,4 @@ $context = Timber::context();
 $context['posts'] = Timber::get_posts(); 
 // -------------------------------------
 
-Timber::render( 'views/index.twig', $context );
+Timber::render( 'views/home.twig', $context );
